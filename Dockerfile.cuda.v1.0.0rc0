@@ -1,5 +1,4 @@
-# Build Tensorflow with support cuDNN v5
-FROM eywalker/tensorflow:v0.12.0rc0-cuda8.0-cudnn5
+FROM eywalker/tensorflow:v1.0.0rc0-cuda8.0-cudnn5
 MAINTAINER Edgar Y. Walker <edgar.walker@gmail.com>
 
 # Export port for Jupyter Notebook
