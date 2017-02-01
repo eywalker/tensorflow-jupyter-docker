@@ -1,8 +1,8 @@
 # Build Tensorflow with support cuDNN v5
-ARG TF_TAG=v0.12.1
-FROM eywalker/tensorflow:${TF_TAG}
+FROM eywalker/tensorflow:v0.12.0rc0-cuda8.0-cudnn5
 MAINTAINER Edgar Y. Walker <edgar.walker@gmail.com>
 
+# Export port for Jupyter Notebook
 EXPOSE 8888
 
 # Hack to deal with weird bug that prevents running `jupyter notebook` directly
@@ -17,5 +17,5 @@ ADD ./jupyter_notebook_config.py /root/.jupyter/
 
 WORKDIR /notebooks
 
-# By default start running jupyter notebook and tensorboard
+# By default start running jupyter notebook
 ENTRYPOINT ["/scripts/run_jupyter.sh"]
